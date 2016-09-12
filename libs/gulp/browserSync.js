@@ -6,33 +6,27 @@ const $ = require("gulp-load-plugins")();
 const php = require("gulp-connect-php");
 const browserSync = require("browser-sync");
 
-/**
- * npm install browser-sync gulp-connect-php --save
- */
-module.exports = (path) => {
-    var task = {};
+const {src,dest} = global;
 
-    task.start = (config) => {
-        config = Object.assign({},{
-            proxy: "127.0.0.1:8000",
-            open: "external",
-            //notify: false
-        },config);
+gulp.task("server",()=> {
 
-        var server = {
-            base: `${path.dest}`,
-        }
+    var config = {
+        proxy: "127.0.0.1:8000",
+        open: "external",
+        //notify: false
+    };
 
-        php.server(server,() => {
-            browserSync(config)
-        });
-
-        gulp.watch(`${path.dest}/**/*`, () => {
-            setTimeout(function(){
-                browserSync.reload();
-            },500);
-        });
+    var server = {
+        base: `${dest}`,
     }
 
-    return task;
-}
+    php.server(server,() => {
+        browserSync(config)
+    });
+
+    gulp.watch(`${dest}/**/*`, () => {
+        setTimeout(function(){
+            browserSync.reload();
+        },500);
+    });
+});

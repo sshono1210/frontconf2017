@@ -3,35 +3,31 @@
 const gulp = require("gulp");
 const $ = require("gulp-load-plugins")();
 
-const bourbon = require("node-bourbon");
-const neat = require("node-neat");
+const {src,dest,jade_option} = global;
 
-/**
- * $ npm i gulp-jade --save
- */
-module.exports = function(path){
-    var task = {};
-
-    task.target = [
-        `${path.src}assets/tmpl/**/*.jade`,
+gulp.task("jade",()=> {
+    let options = (jade_option)?jade_option:{
+        locals:{},
+        pretty: true
+    };
+    let srcPattern = [
+        `${src}assets/tmpl/**/*.jade`,
+        `!${src}assets/tmpl/**/_*`,
     ];
+    gulp.src(srcPattern)
+        .pipe($.plumber({
+            errorHandler: $.notify.onError('<%= error.message %>')
+        }))
+        .pipe($.jade(options))
+        .pipe(gulp.dest(`${dest}/`));
+});
 
-    task.build = (options={}) => {
-        options = Object.assign({},{
-            locals:{},
-            pretty:true
-        },options);
+gulp.task("jade:watch",()=>{
+    let target = [
+        `${src}assets/tmpl/**/*.jade`,
+    ];
+    gulp.watch(target,["jade"])
+});
 
-        gulp.src([
-                `${path.src}assets/tmpl/**/*.jade`,
-                `!${path.src}assets/tmpl/**/_*`,
-            ])
-            .pipe($.plumber({
-                errorHandler: $.notify.onError('<%= error.message %>')
-            }))
-            .pipe($.jade(options))
-            .pipe(gulp.dest(`${path.dest}/`));
-    }
-    return task;
-};
-
+global.watch.push("jade:watch")
+global.build.push("jade")
