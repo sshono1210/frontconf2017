@@ -31,7 +31,7 @@ gulp.task("sass",()=> {
         .pipe(gulp.dest(`${dest}assets/css/`));
 });
 
-gulp.task("jade:watch",()=>{
+gulp.task("sass:watch",()=>{
     let target = [
         `${src}assets/scss/**/*.scss`,
     ];
