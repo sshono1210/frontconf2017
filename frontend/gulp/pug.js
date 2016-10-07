@@ -19,7 +19,7 @@ gulp.task("pug",()=> {
         .pipe($.plumber({
             errorHandler: $.notify.onError('<%= error.message %>')
         }))
-        .pipe($.jade(options))
+        .pipe($.pug(options))
         .pipe(gulp.dest(`${dest}/`));
 });
 

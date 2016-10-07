@@ -22,8 +22,11 @@ gulp.task("sass",()=> {
         .pipe($.plumber({
             errorHandler: $.notify.onError('<%= error.message %>')
         }))
-        .pipe($.pleeese({
-            sass: options,
+        .pipe($.sass(options))
+        .pipe($.pleeease({
+            autoprefixer:true,
+            minifier: true,
+            mqpacker: true
         }))
         .pipe(gulp.dest(`${dest}assets/css/`));
 });
