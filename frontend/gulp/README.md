@@ -7,13 +7,13 @@ git subtree で引っ張ってきてから、適当にコピペして使う系�
 
 ````
 $ git remote add frontend https://github.com/chatbox-inc/frontend.git
-$ git subtree add --prefix=frontend/libs frontend master
+$ git subtree add --prefix=frontend/gulp frontend lib
 ````
 
 ローカルブランチでの差分比較を運用に加えたい場合は以下を加える。
 
 ````
-$ git subtree push --prefix frontend/libs . frontend
+$ git subtree push --prefix frontend/gulp . lib
 ````
 
 gulpfileやpackage.jsonの取得は以下で
