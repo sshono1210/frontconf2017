@@ -16,6 +16,14 @@ $ git subtree add --prefix=frontend/libs frontend master
 $ git subtree push --prefix frontend/libs . frontend
 ````
 
+gulpfileやpackage.jsonの取得は以下で
+
+````
+$ curl https://raw.githubusercontent.com/chatbox-inc/frontend/master/gulpfile.js > gulpfile.js
+$ curl https://raw.githubusercontent.com/chatbox-inc/frontend/master/package.json > package.json
+
+````
+
 
 ## npm installs 
 
