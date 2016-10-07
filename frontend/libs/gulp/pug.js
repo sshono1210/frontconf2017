@@ -5,16 +5,17 @@ const $ = require("gulp-load-plugins")();
 
 const {src,dest,jade_option} = global;
 
-gulp.task("jade",()=> {
+gulp.task("pug",()=> {
     let options = (jade_option)?jade_option:{
         locals:{},
         pretty: true
     };
     let srcPattern = [
         `${src}assets/tmpl/**/*.jade`,
+        `${src}assets/tmpl/**/*.pug`,
         `!${src}assets/tmpl/**/_*`,
     ];
-    gulp.src(srcPattern)
+    return gulp.src(srcPattern)
         .pipe($.plumber({
             errorHandler: $.notify.onError('<%= error.message %>')
         }))
@@ -22,12 +23,12 @@ gulp.task("jade",()=> {
         .pipe(gulp.dest(`${dest}/`));
 });
 
-gulp.task("jade:watch",()=>{
+gulp.task("pub:watch",()=>{
     let target = [
-        `${src}assets/tmpl/**/*.jade`,
+        `${src}assets/tmpl/**/*`,
     ];
-    gulp.watch(target,["jade"])
+    return gulp.watch(target,["jade"])
 });
 
-global.watch.push("jade:watch")
-global.build.push("jade")
+global.watch.push("pug:watch")
+global.build.push("pug")

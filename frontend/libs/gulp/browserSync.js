@@ -24,7 +24,7 @@ gulp.task("server",()=> {
         browserSync(config)
     });
 
-    gulp.watch(`${dest}/**/*`, () => {
+    return gulp.watch(`${dest}/**/*`, () => {
         setTimeout(function(){
             browserSync.reload();
         },500);

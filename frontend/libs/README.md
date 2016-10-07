@@ -28,7 +28,7 @@ $ npm i gulp gulp-load-plugins gulp-plumber gulp-notify run-sequence --save
 gulp sass
 
 ````
-$ npm i gulp-sass node-bourbon node-neat gulp-pleeease --save
+$ npm i node-bourbon node-neat gulp-pleeease --save
 ````
 
 gulp jade

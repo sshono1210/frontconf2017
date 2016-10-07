@@ -8,7 +8,7 @@ global.build = [];
 global.src = "./frontend/";
 global.dest = "./public/";
 
-require("./frontend/libs/gulp/jade.js")
+require("./frontend/libs/gulp/pug.js")
 require("./frontend/libs/gulp/sass.js")
 require("./frontend/libs/gulp/webpack.js")
 require("./frontend/libs/gulp/browserSync.js")

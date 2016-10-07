@@ -18,11 +18,13 @@ gulp.task("sass",()=> {
         `${src}assets/scss/**/*.scss`
     ];
 
-    gulp.src(srcPattern)
+    return gulp.src(srcPattern)
         .pipe($.plumber({
             errorHandler: $.notify.onError('<%= error.message %>')
         }))
-        .pipe($.sass(options))
+        .pipe($.pleeese({
+            sass: options,
+        }))
         .pipe(gulp.dest(`${dest}assets/css/`));
 });
 
@@ -30,7 +32,7 @@ gulp.task("jade:watch",()=>{
     let target = [
         `${src}assets/scss/**/*.scss`,
     ];
-    gulp.watch(target,["sass"])
+    return gulp.watch(target,["sass"])
 });
 
 global.watch.push("sass:watch")

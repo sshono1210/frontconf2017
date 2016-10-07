@@ -36,7 +36,7 @@ gulp.task("webpack",()=> {
     let srcPattern = [
         `${src}assets/js/**/*.js`
     ];
-    gulp.src(srcPattern)
+    return gulp.src(srcPattern)
         .pipe($.plumber({
             errorHandler: $.notify.onError('<%= error.message %>')
         }))
@@ -48,7 +48,7 @@ gulp.task("webpack:watch",()=>{
     let target = [
         `${src}assets/js/**/*`,
     ];
-    gulp.watch(target,["webpack"])
+    return gulp.watch(target,["webpack"])
 });
 
 global.watch.push("webpack:watch")
