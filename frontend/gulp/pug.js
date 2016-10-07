@@ -23,7 +23,7 @@ gulp.task("pug",()=> {
         .pipe(gulp.dest(`${dest}/`));
 });
 
-gulp.task("pub:watch",()=>{
+gulp.task("pug:watch",()=>{
     let target = [
         `${src}assets/tmpl/**/*`,
     ];
