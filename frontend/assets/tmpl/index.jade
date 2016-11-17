@@ -1,20 +1,9 @@
 doctype html
-html(lang="en")
-  head
-    title= pageTitle
-    script(type='text/javascript').
-      if (foo) {
-        bar(1 + 5)
-      }
+html(lang="ja")
+  include _head.jade
   body
-    h1 Jade - node template engine
-    #container.col
-      if youAreUsingJade
-        p You are amazing
-      else
-        p Get on it!
-      p.
-        Jade is a terse and simple
-        templating language with a
-        strong focus on performance
-        and powerful features.
+    .background
+    include top/_sec_hero.jade
+    include top/_sec_concept.jade
+    include top/_sec_share.jade
+    include common/_footer.jade

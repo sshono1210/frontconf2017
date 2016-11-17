@@ -27,7 +27,7 @@ gulp.task("pug:watch",()=>{
     let target = [
         `${src}assets/tmpl/**/*`,
     ];
-    return gulp.watch(target,["jade"])
+    return gulp.watch(target,["pug"])
 });
 
 global.watch.push("pug:watch")

@@ -1,0 +1,149 @@
+@mixin media {
+  @media screen and (min-width:$break-point) {
+    @content
+  }
+}
+
+@mixin mediaSP {
+  @media screen and (min-width:376px) and (max-width:$break-pointSP) {
+    @content
+  }
+}
+
+@mixin page-bottom{
+  padding-bottom: 4.5em;
+}
+
+@mixin en {
+  margin: 0 .5em;
+  font-size: 1.1em;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+@mixin heading($style:white) {
+
+  &::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 20px;
+    background: url(../../img/heading_#{$style}.png) no-repeat;
+    background-position: center;
+    background-size: auto 100%;
+  }
+  &::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 20px;
+    background: url(../../img/heading_#{$style}.png) no-repeat;
+    background-position: center;
+    background-size: auto 100%;
+  }
+
+  //@include media{
+  //  .title {
+  //    display: inline-block;
+  //  }
+  //  &::before {
+  //    content: "";
+  //    display: inline-block;
+  //    max-width: 300px;
+  //    height: 20px;
+  //    background: url(../../img/heading_#{$style}.png) no-repeat;
+  //    background-position: center;
+  //    background-size: 80%;
+  //  }
+  //  &::after {
+  //    content: "";
+  //    display: inline-block;
+  //    max-width: 300px;
+  //    height: 20px;
+  //    background: url(../../img/heading_#{$style}.png) no-repeat;
+  //    background-position: center;
+  //    background-size: 80%;
+  //  }
+  //
+  //}
+
+
+}
+
+@mixin btn {
+  display: block;
+  a {
+    margin-bottom: .6em;
+    box-sizing: border-box;
+    display: inline-block;
+    border: 4px solid #fff;
+    padding: 7px 0;
+    min-width: 300px;
+    color: $font;
+    font-weight: bold;
+    background: rgba(255,255,255,.7);
+    border-radius: 9999px;
+  }
+
+  @include media {
+    display: inline-block;
+  }
+}
+
+@mixin btn--line($icon:"\f099") {
+  display: block;
+  a {
+    margin-bottom: .6em;
+    display: inline-block;
+    padding: 5px 0;
+    min-width: 300px;
+    color: $font;
+    font-weight: bold;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f28368+27,57c0ed+100 */
+    background: rgb(242,131,104); /* Old browsers */
+    background: -moz-linear-gradient(left,  rgba(242,131,104,1) 27%, rgba(87,192,237,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left,  rgba(242,131,104,1) 27%,rgba(87,192,237,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right,  rgba(242,131,104,1) 27%,rgba(87,192,237,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f28368', endColorstr='#57c0ed',GradientType=1 ); /* IE6-9 */
+
+    border-radius: 9999px;
+  }
+  span {
+    display: inline-block;
+    padding: 5px 0;
+    width: 96%;
+    height: 90%;
+    color: $font;
+    font-weight: bold;
+    background: #fff;
+    border-radius: 9999px;
+    &::before {
+      display: inline-block;
+      padding-right: 8px;
+      vertical-align: middle;
+      font-family: FontAwesome;
+      font-size: 20px;
+      @content
+    }
+  }
+  @include media {
+    display: inline-block;
+  }
+}
+
+@mixin btn--footer {
+  display: inline-block;
+  a {
+    margin-bottom: 5px;
+    box-sizing: border-box;
+    display: inline-block;
+    border: 2px solid #fff;
+    padding: 2px 0;
+    min-width: 100px;
+    color: rgba(64,98,111,1);
+    font-weight: bold;
+    font-size: 10px;
+    background: rgba(255,255,255,.7);
+    border-radius: 9999px;
+  }
+}

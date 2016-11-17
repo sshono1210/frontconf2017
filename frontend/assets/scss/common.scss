@@ -1,13 +1,80 @@
 @import "node_modules/normalize.css/normalize.css";
+@import "lib/_value.scss";
+@import "lib/_mixin.scss";
 
-// Button
-//
-// ボタンです。
-//
-// Markup:
-// <div class="red">Button</div>
-//
-// Styleguide 1.0.0
-.red{
-  color:blue;
+
+body{
+  width: 100%;
+  height: 100%;
+
+  font-size: 15px;
+  font-family: $font_set_en;
+  font-weight: normal;
+  color: $font;
+  line-height:1.8;
+
+  h1 {
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: normal;
+  }
+  h2 {
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: normal;
+    font-size: 20px;
+    padding: .4em;
+  }
+  a {
+    text-decoration: none;
+  }
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.background {
+  width: 100vw;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-image: url(../../img/bg.png);
+  background-size: cover;
+  background-position: 50% 50%;
+  z-index: -1;
+}
+
+@import "_top.scss";
+
+#footer {
+  padding: 20px 0 40px;
+  font-size: 13px;
+  background: rgba(64,98,111,.8);
+  .container {
+    text-align: center;
+  }
+  .footer__sns-area {
+    margin: .5em 0 2em;
+    .btn {
+      @include btn--footer;
+    }
+  }
+  .footer__logo{
+    display: inline-block;
+    max-width: 180px;
+  }
+  .footer__lead {
+    line-height: 1.2;
+    color: $font_light;
+    a {
+      color:$blue;
+    }
+  }
 }

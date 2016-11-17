@@ -1,0 +1,228 @@
+@import "lib/_value.scss";
+@import "lib/_mixin.scss";
+
+#hero{
+  padding: 0 5px;
+  @include page-bottom;
+  color:$font_light;
+  //background-image: url("../../img/bg.png");
+  //background-size: cover;
+  position: relative;
+
+  .hero__block{
+    text-align: center;
+    .bg__imgA {
+      width: 140px;
+      position: absolute;
+      left: 10px;
+      top: 20px;
+    }
+    .bg__imgB {
+      margin-left: -40px;
+      width: 80px;
+      position: absolute;
+      left: 50%;
+      top: 80px;
+    }
+    .bg__imgC {
+      width: 120px;
+      position: absolute;
+      right: 10px;
+      top: 50px;
+    }
+    .bg__imgD {
+      width: 120px;
+      position: absolute;
+      right: 10px;
+      top: 190px;
+    }
+    .bg__imgE {
+      margin-left: -80px;
+      width: 110px;
+      position: absolute;
+      left: 50%;
+      top: 290px;
+    }
+    .bg__imgF {
+      width: 90px;
+      position: absolute;
+      left: 10px;
+      top: 200px;
+    }
+  }
+
+  .hero__title-area {
+    z-index: 100;
+    margin: 0 auto;
+    margin-top: 60px;
+    display: inline-block;
+    width: 100%;
+    height: 270px;
+    position: relative;
+    background-image: url(../../img/frame@2x.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+  }
+  .hero__title_block {
+    margin: auto;
+    width: 50%;
+    height: 35%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+  }
+  .hero__title {
+    text-align: center;
+    margin: auto;
+
+  }
+  .hero__title {
+    display: inline-block;
+    font-size: 25px;
+    line-height: 1.4;
+  }
+  .hero__infomation {
+    margin: 1.7em;
+    font-size: 1.2em;
+    font-weight: bold;
+    font-family: $font_set_ja;
+
+  }
+  .hero__action-area {
+    display: inline-block;
+    width: 100%;
+    .btn {
+      @include btn;
+    }
+  }
+}
+
+#concept {
+  @include page-bottom;
+  background: linear-gradient(to bottom,  rgba(254,225,176,0.01) 0%,rgba(255,253,240,0.58) 38%,rgba(255,255,251,0.9) 59%,rgba(255,255,255,0.9) 66%);
+  .container {
+    text-align: center;
+  }
+  .concept__heading {
+    color: $font_light;
+    font-size: 20px;
+    @include heading(white)
+  }
+
+  .concept__block {
+    margin-top: 2em;
+    background:url("../../img/concept_bg_sp.png") ;
+    background-position: top center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+    //@include media {
+    //  max-whidth: 800px;
+    //  background: url("../../img/concept_bg.png") no-repeat;
+    //  background-position: 50% 50%;
+    //  background-size: 80vw;
+    //}
+
+  }
+  .concept__text {
+    p {
+      margin: 2em 0;
+      line-height: 2;
+    }
+    margin-top: 40px;
+    padding-bottom: 80px;
+    display: inline-block;
+    max-width: 250px;
+    font-family: $font_set_ja;
+    .en {
+      @include en;
+    }
+  }
+
+}
+
+#share {
+  @include page-bottom;
+  background: rgba(255,255,255,.9);
+  position: relative;
+
+  .bg__imgA {
+    width: 140px;
+    position: absolute;
+    left: 10px;
+    top: 20px;
+    opacity: .1;
+  }
+  .bg__imgB {
+    margin-left: -40px;
+    width: 80px;
+    position: absolute;
+    left: 50%;
+    top: 80px;
+    opacity: .1;
+  }
+  .bg__imgC {
+    width: 120px;
+    position: absolute;
+    right: 10px;
+    top: 50px;
+    opacity: .1;
+  }
+  .bg__imgD {
+    width: 120px;
+    position: absolute;
+    right: 10px;
+    top: 190px;
+    opacity: .1;
+  }
+  .bg__imgE {
+    margin-left: -80px;
+    width: 110px;
+    position: absolute;
+    left: 50%;
+    top: 290px;
+    opacity: .1;
+  }
+  .bg__imgF {
+    width: 90px;
+    position: absolute;
+    left: 10px;
+    top: 200px;
+    opacity: .1;
+  }
+  .container {
+    text-align: center;
+  }
+  .share__heading {
+    font-size: 20px;
+    @include heading(color)
+  }
+  .share__block {
+    position: relative;
+    z-index: 1;
+  }
+  .share__intoro {
+    padding: 2em;
+    .en {
+     @include en;
+    }
+  }
+  .share__action-area {
+    .btn--tw {
+      @include btn__line{
+        content: "\f099";
+      };
+    }
+    .btn--fb {
+      @include btn__line{
+        content: "\f09a";
+      }
+    }
+  }
+
+}
