@@ -43,6 +43,6 @@ gulp.task("styleguide:watch",()=>{
     return gulp.watch(target,['styleguide:generate', 'styleguide:applystyles'])
 });
 
-global.watch.push("styleguide:watch")
-global.build.push("styleguide:generate")
-global.build.push("styleguide:applystyles")
+//global.watch.push("styleguide:watch")
+//global.build.push("styleguide:generate")
+//global.build.push("styleguide:applystyles")
