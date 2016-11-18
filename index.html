@@ -23,7 +23,20 @@
     <meta name="twitter:description" content="今年も開催！大阪夏、フロントエンドの最先端を目指すWebの祭典、Grand Frontend Osaka 2016！">
     <meta name="twitter:image" content="http://kfug.jp/gfo2016/img/ogp.png">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-    <script type="text/javascript" src="./assets/js/common.bundle.js"></script>
+    <script type="text/javascript" src="./assets/js/common.bundle.js"></script><script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-66526811-7', 'auto');
+    ga('send', 'pageview');
+
+    $("a").on("click",function(){
+        ga("send","event","link","click",$(this).text(),$(this).attr("href"))
+    })
+</script>
   </head>
   <body>
     <div class="background"></div>
@@ -40,6 +53,7 @@
         <div class="hero__action-area">
           <div class="btn"><a href="#"><span>SPEAKER募集</span></a></div>
           <div class="btn"><a href="#"><span>SPONSOR募集</span></a></div>
+          <p style="font-weight:bold;font-size:1.5em;color: #ff6a1e;background:rgba(255,255,255,.8);border-radius:99999px; padding:5px 0">申し込みフォームは近日公開！！</p>
         </div>
       </div>
     </section>
@@ -69,7 +83,7 @@
             <p> SNSで「<span class="en">つながり</span>」の<br>きっかけを広めよう</p>
           </div>
           <div class="share__action-area">
-            <div class="btn--tw"><a href="https://twitter.com/share?url=http://kfug.jp/frontconf2017/&amp;amp;text=FRONTEND CONFERENCE 2017｜関西フロントエンドUG " target="_blank"><span>Twitterでシェア</span></a></div>
+            <div class="btn--tw"><a href="https://twitter.com/share?url=http://kfug.jp/frontconf2017/&amp;amp;text=FRONTEND CONFERENCE 2017｜関西フロントエンドUG&amp;hashtags=frontkansai" target="_blank"><span>Twitterでシェア</span></a></div>
             <div class="btn--fb"><a href="https://www.facebook.com/sharer/sharer.php?u=http://kfug.jp/frontconf2017/" target="_blank"><span>Facebookでシェア</span></a></div>
           </div>
         </div>
@@ -81,15 +95,16 @@
           <div class="footer__logo-area"><img class="footer__logo" src="./img/KFUG_logo@2x.png"></div>
           <div class="footer__sns-area">
             <div class="btn"><a href="https://twitter.com/frontkansai" target="_blank">Twitter</a></div>
-            <div class="btn"><a href="https://www.facebook.com/grandfrontendosaka2016/" target="_blank">Facebook</a></div>
-            <div class="btn"><a href="http://kfug.connpass.com/" target="_blank">connpass</a></div>
+            <div class="btn"><a href="https://www.facebook.com/frontconf2017" target="_blank">Facebook</a></div>
+            <div class="btn"><a href="https://kfug.connpass.com/" target="_blank">connpass</a></div>
           </div>
           <div class="footer__lead">
-            <p>お問い合わせは<a href="https://www.facebook.com/grandfrontendosaka2016/" target="_blank">Facebookページ</a>または<a href="https://twitter.com/frontkansai" target="_blank">Twitter公式アカウント</a>よりお願いします。</p>
-            <p>関西フロントエンドUGのイベント情報は<a href="http://kfug.connpass.com/" target="_blank">connpassページ</a>や<a href="https://www.facebook.com/grandfrontendosaka2016/" target="_blank">Facebookグループ</a>よりご確認ください。</p>
+            <p>お問い合わせは<a href="https://www.facebook.com/frontconf2017" target="_blank">Facebookページ</a>または<a href="https://twitter.com/frontkansai" target="_blank">Twitter公式アカウント</a>よりお願いします。</p>
+            <p>関西フロントエンドUGのイベント情報は<a href="https://kfug.connpass.com/" target="_blank">connpassページ</a>や<a href="https://www.facebook.com/groups/kansai.frontend/" target="_blank">Facebookグループ</a>よりご確認ください。</p>
           </div>
         </div>
       </div>
     </section>
+    <div class="copyright"><span>Designed by Yasui Risa</span></div>
   </body>
 </html>
