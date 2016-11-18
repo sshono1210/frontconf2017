@@ -1,4 +1,6 @@
 mixin ogp(title,description,image)
+  title=title
+  meta(name="description", content=description)
   meta(property="og:title", content=title)
   meta(property="og:image", content=image)
   meta(property="og:description", content=description)
@@ -10,12 +12,10 @@ mixin ogp(title,description,image)
   meta(name="twitter:image", content=image)
 head
   meta(charset="utf-8")
-  style(src="css/style.css")
-  title FRONTEND CONFERENCE 2017｜関西フロントエンドUG
-  meta(name="description", content="ディスクリプションのコメント")
+  style(src="./css/style.css")
+  meta(name="viewport", content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=no")
   link(rel="canonical", href="http://kfug.jp/frontconf2017/")
   link(rel="icon", type="image/png",href="./img/favicon.ico")
-  meta(name="viewport", content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=no")
   +ogp("FRONTEND CONFERENCE 2017 | 関西フロントエンドUG","Webで働く全ての人のために、FRONTEND CONFERENCE 2017、大阪にて2017年 3月18日開催！","http://kfug.jp/frontconf2017/img/ogp.jpg")
   link(href="https://fonts.googleapis.com/css?family=Capriola", rel='stylesheet')
   link(href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css", rel="stylesheet", crossorigin="anonymous")
