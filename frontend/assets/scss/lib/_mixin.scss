@@ -1,11 +1,10 @@
-@mixin media {
-  @media screen and (min-width:$break-point) {
+@mixin mediaSP {
+  @media screen and (min-width:$break-point) and (max-width:$break-pointSP) {
     @content
   }
 }
-
-@mixin mediaSP {
-  @media screen and (min-width:376px) and (max-width:$break-pointSP) {
+@mixin mediaPC {
+  @media screen and (min-width:$break-pointPC){
     @content
   }
 }
@@ -31,6 +30,11 @@
     background: url(../../img/heading_#{$style}.png) no-repeat;
     background-position: center;
     background-size: auto 100%;
+    
+    @include mediaPC {
+      display: block;
+      
+    }
   }
   &::after {
     content: "";
@@ -42,30 +46,43 @@
     background-size: auto 100%;
   }
 
-  //@include media{
-  //  .title {
-  //    display: inline-block;
-  //  }
-  //  &::before {
-  //    content: "";
-  //    display: inline-block;
-  //    max-width: 300px;
-  //    height: 20px;
-  //    background: url(../../img/heading_#{$style}.png) no-repeat;
-  //    background-position: center;
-  //    background-size: 80%;
-  //  }
-  //  &::after {
-  //    content: "";
-  //    display: inline-block;
-  //    max-width: 300px;
-  //    height: 20px;
-  //    background: url(../../img/heading_#{$style}.png) no-repeat;
-  //    background-position: center;
-  //    background-size: 80%;
-  //  }
-  //
-  //}
+  @include mediaPC{
+    .title {
+      display: inline-block;
+      @include mediaPC {
+        font-size: 1.1em;
+      }
+    }
+    &::before {
+      content: "";
+      display: inline-block;
+      max-width: 300px;
+      height: 20px;
+      background: url(../../img/heading_#{$style}.png) no-repeat;
+      background-position: center;
+      background-size: 80%;
+      @include mediaPC {
+        position: absolute;
+        left: 0;
+        top:15px;
+      }
+    }
+    &::after {
+      content: "";
+      display: inline-block;
+      max-width: 300px;
+      height: 20px;
+      background: url(../../img/heading_#{$style}.png) no-repeat;
+      background-position: center;
+      background-size: 80%;
+      @include mediaPC {
+        position: absolute;
+        right: 0;
+        top:15px;
+      }
+    }
+
+  }
 
 
 }
@@ -85,8 +102,10 @@
     border-radius: 9999px;
   }
 
-  @include media {
+  @include mediaPC {
     display: inline-block;
+    padding: 10px 0;
+    margin: 0 .5em;
   }
 }
 
@@ -99,13 +118,11 @@
     min-width: 280px;
     color: $font;
     font-weight: bold;
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f28368+27,57c0ed+100 */
     background: rgb(242,131,104); /* Old browsers */
     background: -moz-linear-gradient(left,  rgba(242,131,104,1) 27%, rgba(87,192,237,1) 100%); /* FF3.6-15 */
     background: -webkit-linear-gradient(left,  rgba(242,131,104,1) 27%,rgba(87,192,237,1) 100%); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(to right,  rgba(242,131,104,1) 27%,rgba(87,192,237,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f28368', endColorstr='#57c0ed',GradientType=1 ); /* IE6-9 */
-
     border-radius: 9999px;
   }
   span {
@@ -126,8 +143,9 @@
       @content
     }
   }
-  @include media {
+  @include mediaPC {
     display: inline-block;
+    margin: 0 .5em;
   }
 }
 
