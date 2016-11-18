@@ -1,7 +1,7 @@
 @import "node_modules/normalize.css/normalize.css";
 @import "lib/_value.scss";
 @import "lib/_mixin.scss";
-
+@charset  "UTF-8";
 
 body{
   width: 100%;
@@ -50,7 +50,7 @@ body{
   position: fixed;
   top: 0;
   left: 0;
-  background-image: url(../../img/bg.png);
+  background-image: url(../../img/bg.jpg);
   background-size: cover;
   background-position: 50% 50%;
   z-index: -1;
