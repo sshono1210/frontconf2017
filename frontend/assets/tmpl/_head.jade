@@ -1,5 +1,4 @@
-
-mixin ogp(title,image,description)
+mixin ogp(title,description,image)
   meta(property="og:title", content=title)
   meta(property="og:image", content=image)
   meta(property="og:description", content=description)
@@ -17,9 +16,10 @@ head
   link(rel="canonical", href="ホームのURL")
   link(rel="icon", type="image/png",href="./img/favicon.ico")
   meta(name="viewport", content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=no")
-  +ogp("FRONTEND CONFERENCE 2017 | 関西フロントエンドUG","Webで働く全ての人のために FRONTEND CONFERENCE 2017 大阪梅田にて、2017年3月 開催！ ","http://kfug.jp/frontconf2017/img/ogp.jpg")
+  +ogp("FRONTEND CONFERENCE 2017 | 関西フロントエンドUG","Webで働く全ての人のために、FRONTEND CONFERENCE 2017、大阪にて2017年 3月18日開催！","http://kfug.jp/frontconf2017/img/ogp.jpg")
   link(href="https://fonts.googleapis.com/css?family=Capriola", rel='stylesheet')
-  link(href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css", rel="stylesheet", integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN", crossorigin="anonymous")
+  link(href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css", rel="stylesheet", crossorigin="anonymous")
   link(rel="stylesheet", href="./assets/css/common.css")
   script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js")
   script(type="text/javascript", src="./assets/js/common.bundle.js")
+
