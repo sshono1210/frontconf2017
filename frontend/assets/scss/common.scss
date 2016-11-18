@@ -3,7 +3,19 @@
 @import "lib/_mixin.scss";
 @charset  "UTF-8";
 
+::selection {
+  background: rgba(225,225,225,.4);
+  color: $font;
+}
+
+//Firefox
+::-moz-selection {
+  background: #000;
+  color: #fff;
+}
+
 body{
+
   width: 100%;
   height: 100%;
 
@@ -89,4 +101,14 @@ body{
       }
     }
   }
+}
+
+.copyright {
+  background: rgba(64,98,111,.6);
+  text-align: center;
+  span {
+    font-size:10px;
+    color: rgba(255,255,255,.7);
+  }
+
 }
