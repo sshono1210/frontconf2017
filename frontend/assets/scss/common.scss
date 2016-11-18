@@ -69,6 +69,7 @@ body{
     margin: .5em 0 2em;
     .btn {
       @include btn--footer;
+      margin: 0 .2em;
     }
   }
   .footer__logo{
@@ -80,6 +81,11 @@ body{
     color: $font_light;
     a {
       color:$blue;
+      transition: all .3s;
+      &:hover {
+        color: $orange;
+
+      }
     }
   }
 }
