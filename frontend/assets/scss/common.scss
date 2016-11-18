@@ -106,9 +106,13 @@ body{
 .copyright {
   background: rgba(64,98,111,.6);
   text-align: center;
-  span {
+  a {
     font-size:10px;
     color: rgba(255,255,255,.7);
+    transition: all .3s;
+    &:hover {
+      color:$orange;
+    }
   }
 
 }
