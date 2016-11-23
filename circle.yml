@@ -10,7 +10,8 @@ deployment:
       - npm run build
       - git config --global user.name "circleci"
       - git config --global user.email "circleci@chatbox-inc.com"
-      - git add .
+      - git rm .gitignore
+      - git add public
       - git commit -m "[ci skip] build on circle ci"
       - git subtree split --branch gh-pages --prefix public
       - git push origin gh-pages:gh-pages -f
