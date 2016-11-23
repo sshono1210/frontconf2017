@@ -1,0 +1,16 @@
+machine:
+  node:
+    version: 6.1.0
+  timezone: Asia/Tokyo
+
+deployment:
+  publish:
+    branch: master
+    commands:
+      - npm run build
+      - git config --global user.name "circleci"
+      - git config --global user.email "circleci@chatbox-inc.com"
+      - git add .
+      - git commit -m "[ci skip] build on circle ci"
+      - git subtree split --branch gh-pages --prefix public
+      - git push origin gh-pages:gh-pages -f
