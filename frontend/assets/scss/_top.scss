@@ -1,6 +1,15 @@
 @import "lib/_value.scss";
 @import "lib/_mixin.scss";
 
+p {
+  margin: 0;
+  padding: 0;
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: 0em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+}
+
 #hero{
   padding: 0 5px;
   @include page-bottom;
@@ -367,4 +376,97 @@
     }
   }
 
+}
+
+#sponsor {
+  @include page-bottom;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&0.01+0,0.9+0,0.7+15,0+50,0.7+85,0.9+100 */
+  background: -moz-linear-gradient(top,  rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.7) 15%, rgba(255,255,255,0) 50%, rgba(255,255,255,0.7) 85%, rgba(255,255,255,0.9) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  rgba(255,255,255,0.9) 0%,rgba(255,255,255,0.7) 15%,rgba(255,255,255,0) 50%,rgba(255,255,255,0.7) 85%,rgba(255,255,255,0.9) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  rgba(255,255,255,0.9) 0%,rgba(255,255,255,0.7) 15%,rgba(255,255,255,0) 50%,rgba(255,255,255,0.7) 85%,rgba(255,255,255,0.9) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6ffffff', endColorstr='#e6ffffff',GradientType=0 ); /* IE6-9 */
+
+  .container {
+    text-align: center;
+    max-width: 1200px;
+  }
+  .sponsor__intoro {
+    margin: 2em 0 4em;
+  }
+  .sponsor__heading {
+    font-size: 20px;
+    @include heading(color);
+    @include mediaPC {
+      position: relative;
+    }
+  }
+  .sponsor__block {
+
+  }
+  .sponsor__lists {
+    width:100%;
+    text-align: center;
+  }
+  .sponsor__list {
+    margin: 0 .5em 1.2em;
+    padding: 1em .5em 2em;
+    display: inline-block;
+    width: 44%;
+    background: #fff;
+    border-radius: 25px;
+  }
+  .sponsor__list__thumb {
+    display: inline-block;
+    margin-top: 1em;
+    width: 150px;
+    height: 130px;
+    background: url(../../img/sponsor01.png) no-repeat center;
+    background-size: contain;
+  }
+  .sponsor__list__title {
+    font-size: 1.3em;
+    font-weight: bold;
+
+    span {
+      display: block;
+      font-size: .7em;
+    }
+  }
+  .sponsor__list__detail {
+    margin: 1em 0;
+
+  }
+  .sponsor__list__share {
+    display: inline-block;
+    margin-bottom: 2em;
+    padding: 2em;
+    max-width: 500px;
+    background-color: lighten( $font, 37% );
+    border-radius: 9999px;
+
+    p {
+      margin-bottom: 1em;
+      font-size: .9em;
+    }
+    .btn--tw {
+      @include btn--line--sponsor{
+        content: "\f099";
+      };
+    }
+    .btn--fb {
+      @include btn--line--sponsor{
+        content: "\f09a";
+      }
+    }
+
+  }
+  .sponsor__list__point {
+    margin-bottom: 1em;
+    font-size: .8em;
+  }
+
+  .btn--sponsor {
+    @include btn--sponsor;
+
+  }
 }
