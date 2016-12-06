@@ -7,31 +7,30 @@ section#sponsor
         p  スポンサーを募集しますスポンサーを募集しますスポンサーを募集しますスポンサーを募集しますスポンサーを募集します
       .sponsor__lists
 
-        - for (var i = 0; i < 7; i++) {
-        .sponsor__list
-          .sponsor__list__thumb
-          .sponsor__list__title
-            p 懇親会プレゼント
-              span スポンサー
-          .sponsor__list__detail
-            p 懇親会での参加者向けプレゼント
+        each sponsor in sponsor_lists
+          .sponsor__list
+            - var bgValue = "background-image: url('./img/sponsor"+sponsor.pict+".png');"
+            .sponsor__list__pict(style=bgValue)
+            .sponsor__list__title
+              p #{sponsor.title}
+                span スポンサー
+            .sponsor__list__detail
+              p #{sponsor.detail}
 
-          .sponsor__list__share
-            p みんなにシェアして
-              br
-              | スポンサーにプレゼントをおねだりしよう！
-            .btn--tw
-              a(href="https://twitter.com/share?url=http://kfug.jp/frontconf2017/&amp;text=FRONTEND CONFERENCE 2017｜関西フロントエンドUG&hashtags=frontkansai" target="_blank")
-                span Twitterでシェア
-            .btn--fb
-              a(href="https://www.facebook.com/sharer/sharer.php?u=http://kfug.jp/frontconf2017/" target="_blank")
-                span Facebookでシェア
+            .sponsor__list__share
+              p #{sponsor.share_comment}
+              .btn--tw
+                a(href="https://twitter.com/share?url=http://kfug.jp/frontconf2017/&amp;text=FRONTEND CONFERENCE 2017｜関西フロントエンドUG&hashtags=frontkansai" target="_blank")
+                  span Twitterでシェア
+              .btn--fb
+                a(href="https://www.facebook.com/sharer/sharer.php?u=http://kfug.jp/frontconf2017/" target="_blank")
+                  span Facebookでシェア
 
-          .sponsor__list__point
-            p 企業のノベルティや、製品サービスの露出などに
+            .sponsor__list__point
+              p #{sponsor.point}
 
-          .btn--sponsor
-            a(href="#")
-              span SPONSORになる！
-        - }
+            .btn--sponsor
+              a(href="#")
+                span SPONSORになる！
+
 

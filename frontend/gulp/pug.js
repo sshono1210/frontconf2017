@@ -6,10 +6,7 @@ const $ = require("gulp-load-plugins")();
 const {src,dest,jade_option} = global;
 
 gulp.task("pug",()=> {
-    let options = (jade_option)?jade_option:{
-        locals:{},
-        pretty: true
-    };
+
     let srcPattern = [
         `${src}assets/tmpl/**/*.jade`,
         `${src}assets/tmpl/**/*.pug`,
@@ -19,7 +16,12 @@ gulp.task("pug",()=> {
         .pipe($.plumber({
             errorHandler: $.notify.onError('<%= error.message %>')
         }))
-        .pipe($.pug(options))
+        .pipe($.pug({
+            locals:{
+                sponsor_lists: require("../data/sponsor_lists.js"),
+            },
+            pretty:true
+        }))
         .pipe(gulp.dest(`${dest}/`));
 });
 
