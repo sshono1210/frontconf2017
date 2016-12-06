@@ -408,12 +408,18 @@ p {
     text-align: center;
   }
   .sponsor__list {
-    margin: 0 .5em 1.2em;
-    padding: 1em .5em 2em;
     display: inline-block;
-    width: 44%;
+    margin: 0 0 1.2em;
+    padding:0 0 2em;
+    width: 100%;
     background: #fff;
     border-radius: 25px;
+
+    @include mediaPC {
+      margin: 0 .5em 1.2em;
+      padding: 1em .5em 2em;
+      width: 44%;
+    }
   }
   .sponsor__list__thumb {
     display: inline-block;
@@ -467,6 +473,7 @@ p {
 
   .btn--sponsor {
     @include btn--sponsor;
-
   }
+
+
 }
