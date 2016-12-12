@@ -1,3 +1,4 @@
 /node_modules
 /styleguide
 /public/assets
+/public/*.html
