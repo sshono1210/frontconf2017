@@ -4,12 +4,12 @@ section#speaker
             h2.title SPEAKERS
         .speaker__block
 
-            each speaker in speaker_lists
-                .speaker__lists
-                    a.speaker__list(href="#{speaker.link}")
-                        img.speaker__list__pict(src="./img/speaker/"+speaker.photo)
-                        .speaker__list__name #{speaker.name}
-                        .speaker__list__balloon #{speaker.title}
+            .speaker__lists
+                each speaker in speaker_lists
+                        a.speaker__list(href="#{speaker.link}")
+                            img.speaker__list__pict(src="./img/speaker/"+speaker.photo)
+                            .speaker__list__name #{speaker.name}
+                            div(class="speaker__list__balloon--"+speaker.field) #{speaker.title}
 
         //.speaker__link-area
             .btn

@@ -521,8 +521,14 @@ p {
       padding-bottom: 1rem;
     }
   }
-  .speaker__list__balloon {
-    @include balloon-topPage;
+  .speaker__list__balloon--designer {
+    @include balloon-topPage($pink);
+  }
+  .speaker__list__balloon--markup {
+    @include balloon-topPage($yellow);
+  }
+  .speaker__list__balloon--engineer {
+    @include balloon-topPage($blue);
   }
   .speaker__link-area {
     display: inline-block;
