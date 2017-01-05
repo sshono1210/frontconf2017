@@ -3,13 +3,14 @@ section#speaker
         .speaker__heading
             h2.title SPEAKERS
         .speaker__block
-
             .speaker__lists
                 each speaker in speaker_lists
-                        a.speaker__list
-                            img.speaker__list__pict(src="./img/speaker/"+speaker.photo)
-                            .speaker__list__name #{speaker.name}
-                            div(class="speaker__list__balloon--"+speaker.field) #{speaker.title}
+                    div.speaker__list
+                        img.speaker__list__pict(src="./img/speaker/"+speaker.photo)
+                        .speaker__list__name #{speaker.name}
+                        div(class="speaker__list__balloon--"+speaker.field) #{speaker.title}
+            br
+            p(style="text-align:center") and more...
 
         //.speaker__link-area
             .btn

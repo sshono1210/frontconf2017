@@ -8,6 +8,10 @@ a {
     color: $orange;
   }
 }
+a.reset {
+  color: inherit;
+  text-decoration: underline;
+}
 
 p {
   margin: 0;
@@ -262,23 +266,31 @@ p {
   .speaker__block {
     margin: 2em 0;
   }
+  .speaker__lists{
+    display: flex;
+    flex-wrap: wrap;
+    @include mediaPC {
+    }
+  }
   .speaker__list {
     display: inline-block;
+    min-width: 100%;
+    max-width: 100%;
     padding: 0 0 2rem;
     @include mediaPC {
       display: inline-block;
-      width: 48%;
+      min-width: 48%;
+      max-width: 48%;
       &:nth-child(odd) {
-        padding: 3% 2% 3% 0;
+        padding: 3% 1% 3% 1%;
       }
       &:nth-child(even) {
-        padding: 3% 0 3% 2%;
+        padding: 3% 1% 3% 1%;
       }
     }
   }
   .speaker__list__pict {
     width: 40%;
-    height: 40%;
     border-radius: 50%;
     max-width: 160px;
   }

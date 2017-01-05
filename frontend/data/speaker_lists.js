@@ -9,7 +9,7 @@ module.exports = [
         field: "engineer"
     },
     {
-        title: "懇親会プレゼンWebGL 2.0時代の幕開け - ウェブのグラフィックスはどう変わるのか",
+        title: "WebGL 2.0時代の幕開け - ウェブのグラフィックスはどう変わるのか",
         detail : "WebGL 2.0 がいよいよやってきますね。Webの世界においても求められるグラフィックスの質やレベルは日々変わっていっています。今現在の WebGL の立ち位置と、これから先の WebGL の可能性,、そして WebGL 2.0 の登場で見えてくるそのさらに先の世界について考えてみましょう。",
         link: "https://twitter.com/h_doxas",
         photo: "sugimoto.jpg",

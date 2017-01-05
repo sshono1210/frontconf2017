@@ -288,6 +288,7 @@
   color: $font;
   border-radius: 15px;
   font-size: .9em;
+  min-height: 3.5em;
   &::before {
     position: absolute;
     top: -20px;
@@ -303,7 +304,7 @@
   }
   @include mediaPC {
     border-radius: 18px;
-    padding: 1.1rem 15%;
+    padding: 1.1rem 5%;
     &::before {
       top: -25px;
       left: 47%;
