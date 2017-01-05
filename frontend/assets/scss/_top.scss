@@ -525,3 +525,26 @@ p {
     }
   }
 }
+
+#sponsoredBy {
+  padding: 0 10px;
+  text-align: center;
+  @include page-bottom;
+  .sponsoredBy__heading {
+    font-size: 20px;
+    @include heading(color);
+    @include mediaPC {
+      position: relative;
+    }
+  }
+  .sponsoredBy__block {
+    margin: 2em 0;
+  }
+  .sponsoredBy__link-area {
+    display: inline-block;
+    width: 100%;
+    .btn {
+      @include btn;
+    }
+  }
+}
