@@ -479,9 +479,11 @@ p {
 }
 
 #speaker {
-  padding: 0 10px;
   text-align: center;
   @include page-bottom;
+  .container {
+    max-width: 1200px;
+  }
   .speaker__heading {
     font-size: 20px;
     @include heading(color);
@@ -497,8 +499,13 @@ p {
     padding: 0 0 2rem;
     @include mediaPC {
       display: inline-block;
-      width: 45%;
-      padding: 3% 2%;
+      width: 48%;
+      &:nth-child(odd) {
+        padding: 3% 2% 3% 0;
+      }
+      &:nth-child(even) {
+        padding: 3% 0 3% 2%;
+      }
     }
   }
   .speaker__list__pict {
@@ -527,9 +534,11 @@ p {
 }
 
 #sponsoredBy {
-  padding: 0 10px;
   text-align: center;
   @include page-bottom;
+  .container {
+    max-width: 1200px;
+  }
   .sponsoredBy__heading {
     font-size: 20px;
     @include heading(color);
