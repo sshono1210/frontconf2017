@@ -572,3 +572,71 @@ p {
     }
   }
 }
+
+#summary {
+  text-align: center;
+  @include page-bottom;
+  .container {
+    max-width: 1200px;
+  }
+  .summary__heading {
+    font-size: 20px;
+    @include heading(color);
+    @include mediaPC {
+      position: relative;
+    }
+  }
+  .summary__lists {
+    text-align: left;
+    list-style: none;
+    padding-left: 0;
+    padding-top: 2rem;
+    @include mediaPC {
+      padding-top: 1rem;
+      margin-left: auto;
+      margin-right: auto;
+      width: 80VW;
+      max-width: 800px;
+    }
+  }
+  .summary__list {
+    background-color: rgba(255,255,255,.3);
+    margin-bottom: 0.5rem;
+    height: 3.5rem;
+    @include mediaPC {
+      height: 5rem;
+    }
+  }
+  .summary__list__heading {
+    display: inline-block;
+    line-height: 3.5rem;
+    background-color: #FFF;
+    font-size: .8rem;
+    text-align: center;
+    width: 30%;
+    @include mediaPC {
+      width: 20%;
+      font-size: 1rem;
+      line-height: 5rem;
+    }
+  }
+  .summary__list__content {
+    word-wrap: break-word;
+    vertical-align: middle;
+    width: 65%;
+    display: inline-block;
+    line-height: 1rem;
+    padding-left: .5rem;
+    color: $font_light;
+    font-size: .8rem;
+    @include mediaPC {
+      line-height: 5rem;
+      padding-left: 1.5rem;
+      font-size: 1rem;
+    }
+  }
+  .summary__list__contactLink {
+    color: $font_light;
+    text-decoration: underline;
+  }
+}
