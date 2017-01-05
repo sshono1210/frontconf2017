@@ -540,6 +540,21 @@ p {
   .sponsoredBy__block {
     margin: 2em 0;
   }
+  .sponsoredBy__list {
+    display: inline-block;
+    margin-bottom: 30px;
+    @include mediaPC {
+      height: 200px;
+      margin: 30px;
+    }
+  }
+  .sponsoredBy__list__logo {
+    width: 100%;
+    max-width: 400px;
+    @include mediaPC {
+      width: 400px;
+    }
+  }
   .sponsoredBy__link-area {
     display: inline-block;
     width: 100%;
