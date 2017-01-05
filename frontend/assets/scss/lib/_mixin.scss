@@ -280,3 +280,37 @@
     }
   }
 }
+
+@mixin balloon-topPage {
+  position: relative;
+  padding: .5rem;
+  background-color: $pink;
+  color: $font;
+  border-radius: 15px;
+  font-size: .9em;
+  &::before {
+    position: absolute;
+    top: -20px;
+    left: 47%;
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-bottom: 10px solid $pink;
+    border-right: 10px solid transparent;
+    border-top: 10px solid transparent;
+    border-left: 10px solid transparent;
+  }
+  @include mediaPC {
+    border-radius: 18px;
+    padding: 1.1rem 15%;
+    &::before {
+      top: -30px;
+      left: 47%;
+      border-bottom: 15px solid $pink;
+      border-right: 15px solid transparent;
+      border-top: 15px solid transparent;
+      border-left: 15px solid transparent;
+    }
+  }
+}
