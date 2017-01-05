@@ -19,6 +19,7 @@ gulp.task("pug",()=> {
         .pipe($.pug({
             locals:{
                 sponsor_lists: require("../data/sponsor_lists.js"),
+                speaker_lists: require("../data/speaker_lists.js"),
             },
             pretty:true
         }))
