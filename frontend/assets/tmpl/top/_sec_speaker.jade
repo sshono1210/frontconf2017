@@ -3,26 +3,13 @@ section#speaker
         .speaker__heading
             h2.title SPEAKERS
         .speaker__block
-            .speaker__lists
-                a.speaker__list(href="http://chatbox-inc.com/page/member/shono/")
-                    img.speaker__list__pict(src="img/speaker/shono.jpg")
-                    .speaker__list__name 庄埜 詩織
-                    .speaker__list__balloon 懇親会プレゼンWebGL 2.0時代の幕開け - ウェブのグラフィックスはどう変わるのか
 
-                a.speaker__list(href="http://chatbox-inc.com/page/member/shono/")
-                    img.speaker__list__pict(src="img/speaker/shono.jpg")
-                    .speaker__list__name 庄埜 詩織
-                    .speaker__list__balloon 懇親会プレゼンWebGL 2.0時代の幕開け - ウェブのグラフィックスはどう変わるのか
-
-                a.speaker__list(href="http://chatbox-inc.com/page/member/shono/")
-                    img.speaker__list__pict(src="img/speaker/shono.jpg")
-                    .speaker__list__name 庄埜 詩織
-                    .speaker__list__balloon 懇親会プレゼンWebGL 2.0時代の幕開け - ウェブのグラフィックスはどう変わるのか
-
-                a.speaker__list(href="http://chatbox-inc.com/page/member/shono/")
-                    img.speaker__list__pict(src="img/speaker/shono.jpg")
-                    .speaker__list__name 庄埜 詩織
-                    .speaker__list__balloon 懇親会プレゼンWebGL 2.0時代の幕開け - ウェブのグラフィックスはどう変わるのか
+            each speaker in speaker_lists
+                .speaker__lists
+                    a.speaker__list(href="#{speaker.link}")
+                        img.speaker__list__pict(src="./img/speaker/"+speaker.photo)
+                        .speaker__list__name #{speaker.name}
+                        .speaker__list__balloon #{speaker.title}
 
         //.speaker__link-area
             .btn
