@@ -283,7 +283,7 @@
 
 @mixin balloon-topPage {
   position: relative;
-  padding: .5rem;
+  padding: 1rem;
   background-color: $pink;
   color: $font;
   border-radius: 15px;
@@ -305,12 +305,12 @@
     border-radius: 18px;
     padding: 1.1rem 15%;
     &::before {
-      top: -30px;
-      left: 47%;
-      border-bottom: 15px solid $pink;
-      border-right: 15px solid transparent;
-      border-top: 15px solid transparent;
-      border-left: 15px solid transparent;
+      top: -26px;
+      left: 48%;
+      border-bottom: 13px solid $pink;
+      border-right: 13px solid transparent;
+      border-top: 13px solid transparent;
+      border-left: 13px solid transparent;
     }
   }
 }
