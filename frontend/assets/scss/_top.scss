@@ -477,3 +477,64 @@ p {
 
 
 }
+
+#speaker {
+  @include page-bottom;
+  .container {
+    text-align: center;
+    max-width: 1200px;
+  }
+  .speaker__heading {
+    font-size: 20px;
+    @include heading(color);
+    @include mediaPC {
+      position: relative;
+    }
+  }
+  .speaker__block {
+    margin: 2em 0;
+  }
+  .speaker__list {
+    display: inline-block;
+    padding-bottom: 2rem;
+    @include mediaPC {
+      display: inline-block;
+      width: 45%;
+      padding: 2%;
+    }
+  }
+  .speaker__list__pict {
+    width: 40%;
+    height: 40%;
+    border-radius: 50%;
+    max-width: 160px;
+  }
+  .speaker__list__name {
+    color: $font_light;
+    padding-bottom: .6rem;
+  }
+  .speaker__list__balloon {
+    position: relative;
+    padding: .5rem;
+    background-color: $pink;
+    color: $font;
+    border-radius: 15px;
+    font-size: .9em;
+    &::before {
+      position: absolute;
+      top: -20px;
+      left: 47%;
+      content: "";
+      display: block;
+      width: 0;
+      height: 0;
+      border-bottom: 10px solid $pink;
+      border-right: 10px solid transparent;
+      border-top: 10px solid transparent;
+      border-left: 10px solid transparent;
+    }
+  }
+  .btn {
+    @include btn;
+  }
+}
