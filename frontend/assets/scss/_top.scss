@@ -481,6 +481,12 @@ p {
 #speaker {
   text-align: center;
   @include page-bottom;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&0.01+0,0.9+0,0.7+15,0+50,0.7+85,0.9+100 */
+  background: -moz-linear-gradient(top,  rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.7) 15%, rgba(255,255,255,0) 50%, rgba(255,255,255,0.7) 85%, rgba(255,255,255,0.9) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  rgba(255,255,255,0.9) 0%,rgba(255,255,255,0.7) 15%,rgba(255,255,255,0) 50%,rgba(255,255,255,0.7) 85%,rgba(255,255,255,0.9) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  rgba(255,255,255,0.9) 0%,rgba(255,255,255,0.7) 15%,rgba(255,255,255,0) 50%,rgba(255,255,255,0.7) 85%,rgba(255,255,255,0.9) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6ffffff', endColorstr='#e6ffffff',GradientType=0 ); /* IE6-9 */
+
   .container {
     max-width: 1200px;
   }
@@ -542,6 +548,12 @@ p {
 #sponsoredBy {
   text-align: center;
   @include page-bottom;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&0.01+0,0.9+0,0.7+15,0+50,0.7+85,0.9+100 */
+  background: -moz-linear-gradient(top,  rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.7) 15%, rgba(255,255,255,0) 50%, rgba(255,255,255,0.7) 85%, rgba(255,255,255,0.9) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  rgba(255,255,255,0.9) 0%,rgba(255,255,255,0.7) 15%,rgba(255,255,255,0) 50%,rgba(255,255,255,0.7) 85%,rgba(255,255,255,0.9) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  rgba(255,255,255,0.9) 0%,rgba(255,255,255,0.7) 15%,rgba(255,255,255,0) 50%,rgba(255,255,255,0.7) 85%,rgba(255,255,255,0.9) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6ffffff', endColorstr='#e6ffffff',GradientType=0 ); /* IE6-9 */
+
   .container {
     max-width: 1200px;
   }
@@ -582,6 +594,12 @@ p {
 #summary {
   text-align: center;
   @include page-bottom;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&0.01+0,0.9+0,0.7+15,0+50,0.7+85,0.9+100 */
+  background: -moz-linear-gradient(top,  rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.7) 15%, rgba(255,255,255,0) 50%, rgba(255,255,255,0.7) 85%, rgba(255,255,255,0.9) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  rgba(255,255,255,0.9) 0%,rgba(255,255,255,0.7) 15%,rgba(255,255,255,0) 50%,rgba(255,255,255,0.7) 85%,rgba(255,255,255,0.9) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  rgba(255,255,255,0.9) 0%,rgba(255,255,255,0.7) 15%,rgba(255,255,255,0) 50%,rgba(255,255,255,0.7) 85%,rgba(255,255,255,0.9) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6ffffff', endColorstr='#e6ffffff',GradientType=0 ); /* IE6-9 */
+
   .container {
     max-width: 1200px;
   }
