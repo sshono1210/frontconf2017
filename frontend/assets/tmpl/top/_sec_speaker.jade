@@ -6,7 +6,7 @@ section#speaker
 
             .speaker__lists
                 each speaker in speaker_lists
-                        a.speaker__list(href="#{speaker.link}")
+                        a.speaker__list
                             img.speaker__list__pict(src="./img/speaker/"+speaker.photo)
                             .speaker__list__name #{speaker.name}
                             div(class="speaker__list__balloon--"+speaker.field) #{speaker.title}
