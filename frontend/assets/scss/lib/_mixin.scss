@@ -280,15 +280,20 @@
     }
   }
 }
-
-@mixin balloon-topPage($bgc) {
+@mixin balloon($bgc) {
   position: relative;
-  padding: 1rem;
   background-color: $bgc;
   color: $font;
   border-radius: 15px;
   font-size: .9em;
+  @include mediaPC {
+    border-radius: 18px;
+  }
+}
+@mixin balloon--topPage($bgc) {
+  @include balloon($bgc);
   min-height: 3.5em;
+  padding: 1rem;
   &::before {
     position: absolute;
     top: -20px;
@@ -303,7 +308,6 @@
     border-left: 10px solid transparent;
   }
   @include mediaPC {
-    border-radius: 18px;
     padding: 1.1rem 5%;
     &::before {
       top: -25px;
@@ -313,6 +317,61 @@
       border-top: 13px solid transparent;
       border-left: 13px solid transparent;
     }
+  }
+}
+
+@mixin balloon--sessionPage($bgc) {
+  @include balloon($bgc);
+  min-height: 180px;
+  text-align: left;
+  padding: 1rem;
+  &::after {
+    position: absolute;
+    bottom: -40px;
+    left: 45%;
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 20px solid $bgc;
+    border-right: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 20px solid transparent;
+  }
+  @include mediaPC {
+    padding: 3rem 4rem 3.5rem;
+    &::after {
+      bottom: -60px;
+      left: 46%;
+      border-top: 30px solid $bgc;
+      border-right: 30px solid transparent;
+      border-bottom: 30px solid transparent;
+      border-left: 30px solid transparent;
+    }
+  }
+}
+@mixin btn--speakerLink {
+  text-align: center;
+  width: 30px;
+  line-height: 26px;
+  border-radius: 30px;
+  font-size: .8rem;
+  box-sizing: border-box;
+  display: inline-block;
+  border: 2px solid #fff;
+  color: $font;
+  font-weight: bold;
+  background: rgba(255,255,255,.7);
+  transition: all .3s;
+  &:hover{
+    color:$font-light;
+    background: transparent;
+  }
+  @include mediaPC {
+    font-size: 1rem;
+    width: 36px;
+    line-height: 32px;
+    border-radius: 36px;
   }
 }
 @mixin gradation {
