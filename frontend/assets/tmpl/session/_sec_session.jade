@@ -5,7 +5,7 @@ section#session
         .session__block
             .session_lists
                 each speaker in speaker_lists
-                    div.session__list
+                    div.session__list(id=""+speaker.id)
                         div(class="session__list__balloon--"+speaker.field)
                             p.session__list__title #{speaker.title}
                             p.session__list__detail #{speaker.detail}

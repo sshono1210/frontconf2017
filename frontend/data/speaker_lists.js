@@ -1,5 +1,6 @@
 module.exports = [
     {
+        id: 1,
         title: "flowtype による型のある世界入門",
         detail : "フロントエンド開発の大規模化に伴い、動的型付け言語である JavaScript においても 静的な「型」というのが求められてくるようになりました。本セッションでは、 JavaScript に「型」を提供する flowtype というツールについてご紹介したいと思います。",
         link: "https://twitter.com/sairoutine",
@@ -9,6 +10,7 @@ module.exports = [
         field: "engineer"
     },
     {
+        id: 2,
         title: "WebGL 2.0時代の幕開け - ウェブのグラフィックスはどう変わるのか",
         detail : "WebGL 2.0 がいよいよやってきますね。Webの世界においても求められるグラフィックスの質やレベルは日々変わっていっています。今現在の WebGL の立ち位置と、これから先の WebGL の可能性,、そして WebGL 2.0 の登場で見えてくるそのさらに先の世界について考えてみましょう。",
         link: "https://twitter.com/h_doxas",
