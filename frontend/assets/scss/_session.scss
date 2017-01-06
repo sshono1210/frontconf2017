@@ -57,8 +57,9 @@ p {
     display: inline-block;
     min-width: 100%;
     max-width: 100%;
-    padding: 0 0 2rem;
+    padding-bottom: 3rem;
     @include mediaPC {
+      padding-bottom: 4rem;
       min-width: 70%;
       max-width: 70%;
     }
