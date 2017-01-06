@@ -302,13 +302,13 @@ p {
     }
   }
   .speaker__list__balloon--designer {
-    @include balloon-topPage($light-pink);
+    @include balloon--topPage($light-pink);
   }
   .speaker__list__balloon--markup {
-    @include balloon-topPage($light-yellow);
+    @include balloon--topPage($light-yellow);
   }
   .speaker__list__balloon--engineer {
-    @include balloon-topPage($light-blue);
+    @include balloon--topPage($light-blue);
   }
   .speaker__link-area {
     display: inline-block;
