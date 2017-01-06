@@ -21,3 +21,133 @@ p {
   -webkit-margin-start: 0px;
   -webkit-margin-end: 0px;
 }
+
+#session {
+  text-align: center;
+  padding-top: 4.5rem;
+  @include page-bottom;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&0.01+0,0+0,0+50,0.7+85,0.9+100 */
+  background: -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, rgba(255,255,255,0) 50%, rgba(255,255,255,0.7) 85%, rgba(255,255,255,0.9) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,0) 50%,rgba(255,255,255,0.7) 85%,rgba(255,255,255,0.9) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(255,255,255,0) 50%,rgba(255,255,255,0.7) 85%,rgba(255,255,255,0.9) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#e6ffffff',GradientType=0 ); /* IE6-9 */
+
+  .container {
+    max-width: 1200px;
+    margin-bottom: 2rem;
+  }
+  .session__heading {
+    font-size: 20px;
+    color: $font_light;
+    @include heading(white);
+    @include mediaPC {
+      position: relative;
+    }
+  }
+  .session__block {
+    margin: 4em 0 2rem;
+  }
+  .session__lists{
+    display: flex;
+    flex-wrap: wrap;
+    @include mediaPC {
+    }
+  }
+  .session__list {
+    display: inline-block;
+    min-width: 100%;
+    max-width: 100%;
+    padding: 0 0 2rem;
+    @include mediaPC {
+      min-width: 70%;
+      max-width: 70%;
+    }
+  }
+  .session__list__balloon--designer {
+    @include balloon--sessionPage($pink-transparent);
+    margin-bottom: 2rem;
+    @include mediaPC {
+      margin-bottom: 4rem;
+    }
+  }
+  .session__list__balloon--markup {
+    @include balloon--sessionPage($yellow-transparent);
+    margin-bottom: 2rem;
+    @include mediaPC {
+      margin-bottom: 4rem;
+    }
+  }
+  .session__list__balloon--engineer {
+    @include balloon--sessionPage($blue-transparent);
+    margin-bottom: 2rem;
+    @include mediaPC {
+      margin-bottom: 4rem;
+    }
+  }
+  .session__list__title {
+    font-size: 1.1em;
+    font-weight: bold;
+    padding-bottom: 1rem;
+    @include mediaPC {
+      padding-bottom: 2rem;
+    }
+  }
+  .session__list__detail {
+    line-height: 1.5rem;
+    @include mediaPC {
+      line-height: 1.8rem;
+    }
+  }
+  .session__list__pict {
+    display: inline-block;
+    width: 35%;
+    img {
+      width: 100%;
+      max-width: 200px;
+      border-radius: 100%;
+    }
+    @include mediaPC {
+      width: 30%;
+      img {
+        width: 80%;
+        border-radius: 180%;
+      }
+    }
+  }
+  .session__list__info {
+    box-sizing: border-box;
+    vertical-align: top;
+    text-align: left;
+    display: inline-block;
+    width: 63%;
+    padding-left: .5rem;
+  }
+  .session__list__name {
+    display: inline-block;
+    color: $font_light;
+    padding: 1rem .5rem .5rem 0;
+    @include mediaPC {
+      padding: 2rem 1rem 1rem 0;
+    }
+  }
+  .session__list__link {
+    @include btn--speakerLink;
+    display: inline-block;
+  }
+  .session__list__profile {
+    font-size: .8rem;
+    line-height: 1.4rem;
+    color: $font_light;
+    @include mediaPC {
+      font-size: .9rem;
+      line-height: 1.5rem;
+    }
+  }
+  .session__link-area {
+    display: inline-block;
+    width: 100%;
+    .btn {
+      @include btn;
+    }
+  }
+}
